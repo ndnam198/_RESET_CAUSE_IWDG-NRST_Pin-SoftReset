@@ -53,6 +53,7 @@
 /* USER CODE BEGIN PV */
 extern IWDG_HandleTypeDef hiwdg;
 uint32_t prev_tick;
+uint32_t temp_tick;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -115,9 +116,10 @@ int main(void)
   {
     toggleAllLed;
     PRINT_VAR(HAL_GetTick());
-    if((HAL_GetTick() - prev_tick) > (IWDG_REFRESH_TIME)){
+    temp_tick = HAL_GetTick() - prev_tick;
+    if(temp_tick > IWDG_REFRESH_TIME){
         prev_tick = HAL_GetTick();
-        printf("IWDG Reset \r\n");
+        printf("\r\nIWDG Reset every %ld\r\n", temp_tick);
         HAL_IWDG_Refresh(&_hiwdg);
     }
     HAL_Delay(50);

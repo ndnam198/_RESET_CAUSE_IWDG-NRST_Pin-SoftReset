@@ -1,6 +1,6 @@
 core_cm3.h:1762:34:__NVIC_SystemReset	4	static,ignoring_inline_asm
-main.c:72:5:main	80	static
-main.c:133:6:SystemClock_Config	72	static
-main.c:168:6:HAL_GPIO_EXTI_Callback	16	static
-main.c:185:6:HAL_TIM_PeriodElapsedCallback	16	static
-main.c:203:6:Error_Handler	80	static
+main.c:74:5:main	80	static
+main.c:136:6:SystemClock_Config	72	static
+main.c:171:6:HAL_GPIO_EXTI_Callback	16	static
+main.c:188:6:HAL_TIM_PeriodElapsedCallback	16	static
+main.c:206:6:Error_Handler	80	static
